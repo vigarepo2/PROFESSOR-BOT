@@ -323,9 +323,11 @@ async def advantage_spell_chok(msg):
     if not g_s:
         print('started')
         reqstr1 = msg.from_user.id if msg.from_user else 0
+        print(reqst1)
         reqstr = await client.get_users(reqstr1)
-        await msg.reply(script.I_CUDNT.format(reqstr.mention))
-        return 
+        print(reqstr)
+        k = await msg.reply(script.I_CUDNT.format(reqstr.mention))
+        return k
        # await asyncio.sleep(8)
         #return await k.delete()
     regex = re.compile(r".*(imdb|wikipedia).*", re.IGNORECASE)  # look for imdb / wiki results
