@@ -321,8 +321,8 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        test=msg.text
-        print(test)
+        #test=msg.text
+        #print(test)
         # reqstr1 = msg.from_user.id if msg.from_user else 0
         # print(reqst1)
         # reqstr = await client.get_users(reqstr1)
