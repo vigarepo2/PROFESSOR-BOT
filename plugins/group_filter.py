@@ -326,7 +326,7 @@ async def advantage_spell_chok(msg):
         # print(reqst1)
         # reqstr = await client.get_users(reqstr1)
         # print(reqstr)
-        k = await msg.reply(script.I_CUDNT)
+        k = await msg.reply(script.MVE_NT_FND)
         print('end')
         return k
        # await asyncio.sleep(8)
