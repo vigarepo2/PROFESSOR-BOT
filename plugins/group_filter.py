@@ -322,11 +322,12 @@ async def advantage_spell_chok(msg):
     gs_parsed = []
     if not g_s:
         print('started')
-        reqstr1 = msg.from_user.id if msg.from_user else 0
-        print(reqst1)
-        reqstr = await client.get_users(reqstr1)
-        print(reqstr)
-        k = await msg.reply(script.I_CUDNT.format(reqstr.mention))
+        # reqstr1 = msg.from_user.id if msg.from_user else 0
+        # print(reqst1)
+        # reqstr = await client.get_users(reqstr1)
+        # print(reqstr)
+        k = await msg.reply(script.I_CUDNT)
+        print('end')
         return k
        # await asyncio.sleep(8)
         #return await k.delete()
