@@ -321,14 +321,14 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        test=msg.txt
+        test=msg.text
         print(test)
         # reqstr1 = msg.from_user.id if msg.from_user else 0
         # print(reqst1)
         # reqstr = await client.get_users(reqstr1)
         # print(reqstr)
         k = await msg.reply(script.MVE_NT_FND)
-        print('end')
+        
         return k
        # await asyncio.sleep(8)
         #return await k.delete()
@@ -354,7 +354,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        mv_rqst = msg.txt
+        mv_rqst = msg.text
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
                    InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
