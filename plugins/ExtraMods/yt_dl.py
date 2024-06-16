@@ -43,7 +43,7 @@ async def song(client, message):
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
 
-        cap = "**BY›› [Mᴋɴ Bᴏᴛᴢ™](https://t.me/mkn_bots_updates)**"
+        cap = f'🎶 𝐓𝐈𝐓𝐋𝐄 ›› {title}\n𝐃𝐔𝐑𝐀𝐓𝐈𝐎𝐍 ›› {duration}'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -59,7 +59,7 @@ async def song(client, message):
         )            
         await m.delete()
     except Exception as e:
-        await m.edit("**🚫 𝙴𝚁𝚁𝙾𝚁 🚫**")
+        await m.edit("**🚫 𝙴𝚁𝚁𝙾𝚁!couldn't download the  song... Report it to @HELL_GaM🚫**")
         print(e)
     try:
         os.remove(audio_file)
