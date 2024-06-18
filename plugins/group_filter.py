@@ -327,7 +327,7 @@ async def advantage_spell_chok(msg):
         # print(reqst1)
         # reqstr = await client.get_users(reqstr1)
         # print(reqstr)
-        k = await msg.reply(script.MVE_NT_FND)
+        k = await msg.reply_photo(photo=SPELL_IMG,script.MVE_NT_FND)
         
         return k
        # await asyncio.sleep(8)
@@ -360,11 +360,12 @@ async def advantage_spell_chok(msg):
         button = [[
                    InlineKeyboardButton("Gᴏᴏɢʟᴇ", url=f"https://www.google.com/search?q={reqst_gle}")
         ]]
-        await msg.reply_photo(
+        k=await msg.reply_photo(
             photo=SPELL_IMG, 
             caption=script.I_CUDNT.format(mv_rqst),
             reply_markup=InlineKeyboardMarkup(button)
         )
+        return k
     temp.GP_SPELL[msg.id] = movielist
     btn = [[InlineKeyboardButton(text=movie.strip(), callback_data=f"spolling#{user}#{k}",)] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
