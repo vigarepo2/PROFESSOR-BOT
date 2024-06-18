@@ -327,7 +327,7 @@ async def advantage_spell_chok(msg):
         # print(reqst1)
         # reqstr = await client.get_users(reqstr1)
         # print(reqstr)
-        k = await msg.reply_photo(photo=SPELL_IMG,script.MVE_NT_FND)
+        k = await msg.reply_photo(photo=SPELL_IMG,caption=script.MVE_NT_FND)
         
         return k
        # await asyncio.sleep(8)
@@ -354,7 +354,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        print('heystarted')
+        # print('heystarted')
         mv_rqst = msg.text
         reqst_gle = mv_rqst.replace(" ", "+")
         button = [[
