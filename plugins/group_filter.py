@@ -76,7 +76,7 @@ async def pm_text(bot, message):
     user_id = message.from_user.id
     user_id_name = message.from_user.username
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
-    await message.reply_text("<b>Nah Not here🙂\nRequest Movies/series/anime in here @MM_Movies_world2!</b>")   
+    await message.reply_text("<b>Nah Not here🙂 Can't reply to your queries here,ask aything to him =>@HELL_GaM \nRequest Movies/series/anime in here ==>@MM_Movies_world2!</b>")   
     await bot.send_message(
         chat_id=int(-1001817598577),
         text=f"<b>#PM_MSG\n\nName : {user}\n\nID : {user_id}\nUsername : @{user_id_name}\nMessage : {content}</b>"
